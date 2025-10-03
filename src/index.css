@@ -1,0 +1,130 @@
+/* index.css - Variables de tema y estilos base */
+
+/* Variables por defecto (tema claro) */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4b5563;
+  --text-tertiary: #374151;
+  --border-color: #eaeaea;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --danger-color: #ef4444;
+}
+
+/* Variables para tema claro */
+:root[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4b5563;
+  --text-tertiary: #374151;
+  --border-color: #eaeaea;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --danger-color: #ef4444;
+}
+
+/* Variables para tema oscuro */
+:root[data-theme="dark"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --border-color: #374151;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --danger-color: #f87171;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para modo oscuro usando clases del body */
+body.dark-theme {
+  background-color: #0a0a0a !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme .navbar {
+  background-color: #0a0a0a !important;
+  border-bottom-color: #374151 !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .library-home {
+  background-color: #1a1a1a !important;
+}
+
+body.dark-theme .library-container {
+  background-color: #0a0a0a !important;
+  border-color: #374151 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .library-title {
+  color: #ffffff !important;
+}
+
+body.dark-theme .library-description {
+  color: #d1d5db !important;
+}
+
+body.dark-theme .explore-button {
+  background-color: #3b82f6 !important;
+}
+
+body.dark-theme .explore-button:hover {
+  background-color: #2563eb !important;
+}
+
+body.dark-theme .nav-logo a {
+  color: #ffffff !important;
+}
+
+body.dark-theme .nav-logo a:hover {
+  color: #3b82f6 !important;
+}
+
+body.dark-theme .nav-link {
+  color: #d1d5db !important;
+}
+
+body.dark-theme .nav-link:hover {
+  color: #3b82f6 !important;
+  background-color: #1a1a1a !important;
+}
+
+body.dark-theme .user-welcome {
+  color: #9ca3af !important;
+  background-color: #2a2a2a !important;
+}
+
+body.dark-theme .logout-btn {
+  background-color: #2a2a2a !important;
+  color: #d1d5db !important;
+}
+
+body.dark-theme .theme-toggle {
+  border-color: #374151 !important;
+  color: #d1d5db !important;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background-color: #1a1a1a !important;
+  border-color: #3b82f6 !important;
+  color: #3b82f6 !important;
+}

@@ -1,0 +1,674 @@
+/* src/pages/Escritores.css */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+
+.escritores {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 3rem;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* Header - Elegancia Académica */
+.escritores-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.escritores-header > div:first-child h1 {
+  font-family: 'Crimson Text', serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-style: italic;
+}
+
+.escritores-header > div:first-child p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+/* Botones Principales */
+.escritores-btn-new {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  padding: 1rem 2rem;
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.escritores-btn-new:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.escritores-back {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.escritores-back:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+/* Feedback */
+.escritores-feedback {
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.escritores-feedback.success {
+  background: rgba(34, 139, 34, 0.05);
+  border-color: #228b22;
+  color: #228b22;
+}
+
+.escritores-feedback.error {
+  background: rgba(139, 0, 0, 0.05);
+  border-color: #8b0000;
+  color: #8b0000;
+}
+
+/* Filtros - Estilo Bibliográfico */
+.escritores-filters {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.escritores-search-input {
+  flex: 1;
+  max-width: 400px;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  background: transparent;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.escritores-search-input:focus {
+  outline: none;
+  border-color: var(--text-primary);
+}
+
+.escritores-filter {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  background: transparent;
+  color: var(--text-primary);
+  min-width: 200px;
+}
+
+/* Tabla - Estilo de Catálogo */
+.escritores-table {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.escritores-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.escritores-table th {
+  background: var(--bg-secondary);
+  padding: 1.2rem 1rem;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.escritores-table td {
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.escritores-table tr:last-child td {
+  border-bottom: none;
+}
+
+.escritores-table tr:hover {
+  background: var(--bg-secondary);
+}
+
+/* Información del Escritor en Tabla */
+.escritores-writer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.escritores-photo-small {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 0;
+  border: 1px solid var(--border-color);
+}
+
+.escritores-no-photo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+}
+
+.escritores-name {
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Estados */
+.escritores-status-active,
+.escritores-status-inactive {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid;
+}
+
+.escritores-status-active {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.escritores-status-inactive {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+/* Acciones */
+.escritores-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.escritores-btn-view,
+.escritores-btn-edit,
+.escritores-btn-delete {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.escritores-btn-view:hover {
+  border-color: var(--text-primary);
+}
+
+.escritores-btn-edit:hover {
+  border-color: var(--text-primary);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.escritores-btn-delete:hover {
+  border-color: #8b0000;
+  color: #8b0000;
+}
+
+/* Estado Vacío */
+.escritores-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Vista de Detalle */
+.escritores-detail {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.escritores-detail-image {
+  text-align: center;
+}
+
+.escritores-detail-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.escritores-no-photo-big {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  font-size: 3rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.escritores-no-photo-big br {
+  margin-bottom: 0.5rem;
+}
+
+.escritores-quick-info {
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+.escritores-quick-info h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 1.5rem 0;
+  font-style: italic;
+}
+
+.escritores-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+}
+
+.escritores-info-row:last-child {
+  border-bottom: none;
+}
+
+.escritores-info-row span:first-child {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.escritores-info-row span:last-child {
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.escritores-detail-content {
+  padding-right: 2rem;
+}
+
+.escritores-section {
+  margin-bottom: 2.5rem;
+}
+
+.escritores-section h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  font-style: italic;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.escritores-section p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Formulario - Estilo Académico */
+.escritores-form {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  padding: 3rem;
+  margin-top: 2rem;
+}
+
+.escritores-section h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 2rem 0;
+  font-style: italic;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.escritores-photo-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.escritores-file-input {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+}
+
+.escritores-photo-preview img {
+  max-width: 200px;
+  height: auto;
+  border: 1px solid var(--border-color);
+}
+
+.escritores-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.escritores-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.escritores-full-width {
+  grid-column: 1 / -1;
+}
+
+.escritores-form-group label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.escritores-form-group input,
+.escritores-form-group select,
+.escritores-form-group textarea {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.escritores-form-group input:focus,
+.escritores-form-group select:focus,
+.escritores-form-group textarea:focus {
+  outline: none;
+  border-color: var(--text-primary);
+}
+
+.escritores-form-group input.escritores-error,
+.escritores-form-group select.escritores-error,
+.escritores-form-group textarea.escritores-error {
+  border-color: #8b0000;
+}
+
+.escritores-error-text {
+  color: #8b0000;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.escritores-form-group small {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.escritores-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+.escritores-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+/* Checkbox Estilizado */
+.escritores-form-group label input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+}
+
+/* Botones del Formulario */
+.escritores-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.escritores-btn-cancel {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.escritores-btn-cancel:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.escritores-btn-submit {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: 1px solid var(--text-primary);
+  padding: 1rem 2rem;
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.escritores-btn-submit:hover:not(:disabled) {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.escritores-btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Animaciones Sutiles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.escritores-table tr {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .escritores {
+    padding: 2rem;
+  }
+  
+  .escritores-detail {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .escritores-detail-content {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .escritores {
+    padding: 1.5rem;
+  }
+  
+  .escritores-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  
+  .escritores-header > div:first-child h1 {
+    font-size: 2.5rem;
+  }
+  
+  .escritores-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .escritores-search-input {
+    max-width: none;
+  }
+  
+  .escritores-form {
+    padding: 2rem;
+  }
+  
+  .escritores-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .escritores-actions {
+    flex-direction: column;
+  }
+  
+  .escritores-actions-cell {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .escritores {
+    padding: 1rem;
+  }
+  
+  .escritores-header > div:first-child h1 {
+    font-size: 2rem;
+  }
+  
+  .escritores-form {
+    padding: 1.5rem;
+  }
+  
+  .escritores-detail-image img {
+    max-width: 200px;
+  }
+}
+
+/* Mejoras de Legibilidad */
+.escritores * {
+  box-sizing: border-box;
+}
+
+.escritores table {
+  border-spacing: 0;
+}
+
+/* Enfocado en el contenido */
+.escritores:focus-within {
+  outline: none;
+}
